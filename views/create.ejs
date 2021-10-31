@@ -1,0 +1,31 @@
+<%- include ('partials/header') %>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 ">
+            <h2 class="text-center mt-4">Add a New Record</h2>
+            <h3><a href="/" class="btn btn-info">All Record</a> </h3>
+            <form class="form-group mt-4 mb-4" action="/create" method="post">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Skill</label>
+                    <input type="text" name="skill" class="form-control" id="exampleInputPassword1">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Department</label>
+                    <input type="text" name="department" class="form-control" id="exampleInputPassword1">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+
+    <%- include ('partials/footer') %>

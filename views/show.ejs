@@ -1,0 +1,43 @@
+<%- include ('partials/header') %>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <table class="table table-hover">
+                <tr>
+                    <th scope="col">Name:</th>
+                    <td>
+                        <%= record.name %>
+                    </td>
+                </tr><br>
+                <tr>
+                    <th scope="col">Skill:</th>
+                    <td>
+                        <%= record.skill %>
+                    </td>
+                </tr><br>
+
+                <tr>
+                    <th scope="col">Department:</th>
+                    <td>
+                        <%= record.department %>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="/edit/<%= record._id %>" class="btn btn-primary">Edit</a>
+
+                    </td>
+                    <td>
+                        <form action="/delete/<%= record._id %>" method="post">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <a href="/" class="btn btn-success">Home</a>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+
+
+            <div class="col-md-4"></div>
+        </div>
+
+        <%- include ('partials/footer') %>
